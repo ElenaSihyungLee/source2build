@@ -33,7 +33,7 @@ java-source2build 사용하기 전 아래의 과정을 통해 사용자의 git r
 
 위의 과정을 통해 받아온 사용자의 git repository 와 함께 java-source2build 사용시 필요한 정보를 s2b.config 파일에 입력해준다.
 
-	* 예시: 
+	<예시> 
 	export FROM_USR_POD_NAME="java_s2b_pod"
 	export FROM_USR_POD_NS="default"
 	export FROM_USR_GIT_REPO="https://github.com/ElenaSihyungLee/publicRepo.git"
