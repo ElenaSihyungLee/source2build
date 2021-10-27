@@ -1,7 +1,7 @@
 # java-source2build 사용 가이드
 
 ## 구성 요소 및 버전
-* java 8 (jdk-8u211)
+* java 8 ([jdk-8u211](https://www.oracle.com/java/technologies/javase/8u212-relnotes.html))
 * maven ([apache-maven-3.8.3](https://dlcdn.apache.org/maven/maven-3/3.8.3/binaries/apache-maven-3.8.3-bin.tar.gz))
 * gradle ([gradle-7.2](https://services.gradle.org/distributions/gradle-7.2-bin.zip))
 
@@ -29,8 +29,23 @@ java-source2build 사용하기 전 아래의 과정을 통해 사용자의 git r
 
 ![image](figure/private_repo_6.png)
 
-## Install Steps
-0. [efk yaml 수정](https://github.com/tmax-cloud/hypercloud-install-guide/tree/master/EFK#step-0-efk-yaml-%EC%88%98%EC%A0%95)
+### s2b.config 파일 수정
+
+위의 과정을 통해 받아온 사용자의 git repository 와 함께 java-source2build 사용시 필요한 정보를 s2b.config 파일에 입력해준다.
+
+	* 예시: 
+	```bash
+	export FROM_USR_POD_NAME="java_s2b_pod"
+	export FROM_USR_POD_NS="default"
+	export FROM_USR_GIT_REPO="https://github.com/ElenaSihyungLee/publicRepo.git"
+	export FROM_USR_GIT_TOKEN="" // Token이 필요없는 public repository인 경우 입력 x
+	export FROM_USR_BUILD_CMD="mvn compile; mvn package; mvn install;"
+	export FROM_USR_RUN_CMD="java -cp hello-world.jar helloWorld;"
+	
+	```
+
+## 사용 Steps
+0. [ yaml 수정](https://github.com/tmax-cloud/hypercloud-install-guide/tree/master/EFK#step-0-efk-yaml-%EC%88%98%EC%A0%95)
 1. [ElasticSearch 설치](https://github.com/tmax-cloud/hypercloud-install-guide/tree/master/EFK#step-2-elasticsearch-%EC%84%A4%EC%B9%98)
 2. [kibana 설치](https://github.com/tmax-cloud/hypercloud-install-guide/tree/master/EFK#step-3-kibana-%EC%84%A4%EC%B9%98)
 3. [fluentd 설치](https://github.com/tmax-cloud/hypercloud-install-guide/tree/master/EFK#step-4-fluentd-%EC%84%A4%EC%B9%98)
