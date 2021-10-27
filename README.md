@@ -14,22 +14,22 @@ java-source2build 사용하기 전 아래의 과정을 통해 사용자의 git r
 Case 1. 사용자의 git repository 가 public 인 경우
     
     * 예시
-    ![image](figure/public_repo.png)
+![image](figure/public_repo.png)
   
 Case 2. 사용자의 git repository 가 private 인 경우 (Token 필요)
     
     * 예시
-    ![image](figure/private_repo_1.png)
+![image](figure/private_repo_1.png)
 
-    ![image](figure/private_repo_2.png)
+![image](figure/private_repo_2.png)
 
-    ![image](figure/private_repo_3.png)
+![image](figure/private_repo_3.png)
 
-    ![image](figure/private_repo_4.png)
+![image](figure/private_repo_4.png)
 
-    ![image](figure/private_repo_5.png)
+![image](figure/private_repo_5.png)
 
-    ![image](figure/private_repo_6.png)
+![image](figure/private_repo_6.png)
 
 ## Install Steps
 0. [efk yaml 수정](https://github.com/tmax-cloud/hypercloud-install-guide/tree/master/EFK#step-0-efk-yaml-%EC%88%98%EC%A0%95)
