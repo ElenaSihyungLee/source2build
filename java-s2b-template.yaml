@@ -1,0 +1,77 @@
+apiVersion: tmax.io/v1
+kind: ClusterTemplate
+metadata:
+  name: java-s2b-clustertemplate
+categories:
+  test
+imageUrl: ""
+urlDescription: ""
+longDescription: ""
+markdownDescription: ""
+objectKinds:
+- Deployment
+objects:
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: ${POD_NAME}
+    namespace: ${POD_NS}
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: s2b-test
+    template:
+      metadata:
+        labels:
+          app: s2b-test
+      spec:
+        containers:
+        - name: java-s2b-container
+          image: 192.168.9.12:5000/s2b-image-test:v1.0
+          imagePullPolicy: IfNotPresent
+          env:
+          - name: GIT_REPO
+            value: ${GIT_REPO}
+          - name: GIT_TOKEN
+            value: ${GIT_TOKEN}
+          - name: USR_BUILD_CMD
+            value: ${USR_BUILD_CMD}
+          - name: USR_RUN_CMD
+            value: ${USR_RUN_CMD}
+
+parameters:
+- description: pod name
+  displayName: POD_NAME
+  name: POD_NAME
+  required: false
+  value: java-s2b-pod
+  valueType: string
+- description: pod Namespace
+  displayName: POD_NS
+  name: POD_NS
+  required: false
+  value: shlee
+  valueType: string
+- description: git repository
+  displayName: GIT_REPO
+  name: GIT_REPO
+  required: true
+  valueType: string
+- description: git token for private repository
+  displayName: GIT_TOKEN
+  name: GIT_TOKEN
+  required: false
+  value: ""
+  valueType: string
+- description: user build command
+  displayName: USR_BUILD_CMD
+  name: USR_BUILD_CMD
+  required: true
+  valueType: string
+- description: user run command
+  displayName: USR_RUN_CMD
+  name: USR_RUN_CMD
+  required: true
+  valueType: string
+
