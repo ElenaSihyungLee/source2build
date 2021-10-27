@@ -7,7 +7,7 @@
 
 ## Prerequisites
 
-### git repository
+### 1. git repository
 
 java-source2build 사용하기 전 아래의 과정을 통해 사용자의 git repository 정보를 준비한다.
 
@@ -29,7 +29,7 @@ java-source2build 사용하기 전 아래의 과정을 통해 사용자의 git r
 
 ![image](figure/private_repo_6.png)
 
-### s2b.config 파일 수정
+### 2. s2b.config 파일 수정
 
 위의 과정을 통해 받아온 사용자의 git repository 와 함께 java-source2build 사용시 필요한 정보를 s2b.config 파일에 입력해준다.
 
