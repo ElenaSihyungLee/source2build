@@ -34,7 +34,6 @@ java-source2build 사용하기 전 아래의 과정을 통해 사용자의 git r
 위의 과정을 통해 받아온 사용자의 git repository 와 함께 java-source2build 사용시 필요한 정보를 s2b.config 파일에 입력해준다.
 
 	* 예시: 
-	```bash
 	export FROM_USR_POD_NAME="java_s2b_pod"
 	export FROM_USR_POD_NS="default"
 	export FROM_USR_GIT_REPO="https://github.com/ElenaSihyungLee/publicRepo.git"
@@ -42,7 +41,6 @@ java-source2build 사용하기 전 아래의 과정을 통해 사용자의 git r
 	export FROM_USR_BUILD_CMD="mvn compile; mvn package; mvn install;"
 	export FROM_USR_RUN_CMD="java -cp hello-world.jar helloWorld;"
 	
-	```
 
 ## 사용 Steps
 0. [ yaml 수정](https://github.com/tmax-cloud/hypercloud-install-guide/tree/master/EFK#step-0-efk-yaml-%EC%88%98%EC%A0%95)
