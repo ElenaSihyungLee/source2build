@@ -41,9 +41,7 @@
   * Default value: java-s2b-pod
   
 * GIT_REPO
-  * 사용자의 git repository
-  * git repo 입력시 **https:// 제외한 주소를 입력해야 합니다** 
-  * <예시> GIT_REPO = github.com/tmax-cloud/catalog.git
+  * 사용자의 git repository 
   * 위의 Prerequisites: Case 1 참조
   
 * GIT_TOKEN
