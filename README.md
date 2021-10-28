@@ -29,6 +29,11 @@ java-source2build 사용하기 전 아래의 과정을 통해 사용자의 git r
 
 ![image](figure/private_repo_6.png)
 
+  * Case 2-1. github의 user ID
+  
+![image](figure/userID.png)
+
+
 ## Parameters
 
 * POD_NAME
@@ -39,15 +44,16 @@ java-source2build 사용하기 전 아래의 과정을 통해 사용자의 git r
   * 사용자의 git repository
   * git repo 입력시 **https:// 제외한 주소를 입력해야 합니다** 
   * <예시> GIT_REPO = github.com/tmax-cloud/catalog.git
-  * 받아오는 법은 위의 Prerequisites 참조
+  * 위의 Prerequisites: Case 1 참조
   
 * GIT_TOKEN
   * private repository일 경우에만 입력
-  * 받아오는 법은 위의 Prerequisites 참조
+  * 위의 Prerequisites: Case 2 참조
   
 * GIT_ID
   * github의 user ID
   * private repository일 경우에만 입력
+  * Prerequisites: Case 2-1 참조
 
 * USR_BUILD_CMD
   * 빌드 시 필요한 command
