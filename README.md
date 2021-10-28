@@ -47,12 +47,13 @@
   * 위의 Prerequisites: Case 1 참조
   
 * GIT_TOKEN
-  * private repository일 경우에만 입력
+  * **private repository**일 경우에만 입력
+  * private repository를 git clone 하기위한 token
   * 위의 Prerequisites: Case 2 참조
   
 * GIT_ID
+  * **private repository**일 경우에만 입력
   * github의 user ID
-  * private repository일 경우에만 입력
   * Prerequisites: Case 2-1 참조
 
 * USR_BUILD_CMD
