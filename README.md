@@ -36,5 +36,5 @@ java-source2build 사용하기 전 아래의 과정을 통해 사용자의 git r
   * Default value: java-s2b-pod
 * GIT_REPO
   * 사용자의 git repository
-  * git repo 입력시 /*/*/*https:// 제외한 주소를 입력해야 합니다/*/*/* 
+  * git repo 입력시 /_/_https:// 제외한 주소를 입력해야 합니다/_/_ 
   * <예시> GIT_REPO = github.com/tmax-cloud/catalog.git
