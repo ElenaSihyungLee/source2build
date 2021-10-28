@@ -30,7 +30,7 @@ objects:
       spec:
         containers:
         - name: java-s2b-container
-          image: sihyunglee/source2build:v1.0
+          image: tmaxcloudck/source2build:v1.0
           imagePullPolicy: IfNotPresent
           env:
           - name: GIT_REPO
@@ -48,11 +48,11 @@ parameters:
 - description: pod name
   displayName: Pod name
   name: POD_NAME
-  required: false
+  required: true
   value: java-s2b-pod
   valueType: string
 - description: git repository
-  displayName: Git repository (without https://)
+  displayName: Git repository
   name: GIT_REPO
   required: true
   valueType: string
