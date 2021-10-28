@@ -34,7 +34,28 @@ java-source2build 사용하기 전 아래의 과정을 통해 사용자의 git r
 * POD_NAME
   * Pod의 이름
   * Default value: java-s2b-pod
+  
 * GIT_REPO
   * 사용자의 git repository
-  * git repo 입력시 /*https:// 제외한 주소를 입력해야 합니다/* 
+  * git repo 입력시 **https:// 제외한 주소를 입력해야 합니다** 
   * <예시> GIT_REPO = github.com/tmax-cloud/catalog.git
+  * 받아오는 법은 위의 Prerequisites 참조
+  
+* GIT_TOKEN
+  * private repository일 경우에만 입력
+  * 받아오는 법은 위의 Prerequisites 참조
+  
+* GIT_ID
+  * github의 user ID
+  * private repository일 경우에만 입력
+
+* USR_BUILD_CMD
+  * 빌드 시 필요한 command
+  * build command 입력시 **각 커맨드 뒤에 꼭 ';' 붙여야 합니다**
+  * <예시> USR_BUILD_CMD = mvn compile; mvn package; mvn install;
+
+* USR_RUN_CMD
+  * 실행 시 필요한 command
+  * run command 입력시 **각 커맨드 뒤에 꼭 ';' 붙여야 합니다**
+  * <예시> USR_RUN_CMD = java -cp hello-world.jar hello.HelloWorld;
+
