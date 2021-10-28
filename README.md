@@ -29,7 +29,7 @@ java-source2build 사용하기 전 아래의 과정을 통해 사용자의 git r
 
 ![image](figure/private_repo_6.png)
 
-## Parameters 설명
+## Parameters
 
 * POD_NAME
   * Pod의 이름
