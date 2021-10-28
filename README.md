@@ -34,7 +34,7 @@
       ![image](figure/userID.png)
 
 
-## Parameters
+## Parameter 설명
 
 * POD_NAME
   * Pod의 이름
