@@ -2,7 +2,6 @@ apiVersion: tmax.io/v1
 kind: TemplateInstance
 metadata:
   name: java-s2b-templateinstance
-  namespace: test
 spec:
   clustertemplate:
     metadata:
